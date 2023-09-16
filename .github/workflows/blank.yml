@@ -27,15 +27,6 @@ jobs:
       # run shellcheck
       - name: ShellCheck
         uses: ludeeus/action-shellcheck@2.0.0
-      - name: Post comment
-        uses: mshick/add-pr-comment@v1
-        if: $
-        with:
-            message: |
-            $
-            repo-token: $
-            repo-token-user-login: 'github-actions[bot]' # The user.login for temporary Github tokens
-            allow-repeats: false # This is the default
             
       # Runs a single command using the runners shell
       - name: Run a one-line script
